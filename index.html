@@ -23,7 +23,7 @@
         height: 100vh;
       }
 
-      .item {
+      .content {
         margin: auto;
         text-align: center;
       }
@@ -42,14 +42,14 @@
   </head>
   <body>
     <div class="container">
-      <div class="item">
+      <div class="content">
         <div class="label">Ваше счастливое число</div>
-        <div id="content" class="number"></div>
+        <div id="number" class="number"></div>
       </div>
     </div>
 
     <script>
-      document.querySelector("#content").textContent = Math.floor(
+      document.querySelector("#number").textContent = Math.floor(
         Math.random() * 100
       );
     </script>
