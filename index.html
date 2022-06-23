@@ -3,8 +3,55 @@
   <head>
     <title>Ваше счастливое число</title>
     <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(180deg, #656abb 0%, #9b7cc3 97.56%);
+        height: 100vh;
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        color: #ffffff;
+      }
+
+      .container {
+        display: flex;
+        height: 100vh;
+      }
+
+      .item {
+        margin: auto;
+        text-align: center;
+      }
+
+      .label {
+        font-size: 24px;
+        line-height: 29px;
+      }
+
+      .number {
+        font-size: 96px;
+        line-height: 116px;
+        margin: 12px 0 0;
+      }
+    </style>
   </head>
   <body>
-    Hello World
+    <div class="container">
+      <div class="item">
+        <div class="label">Ваше счастливое число</div>
+        <div id="content" class="number"></div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector("#content").textContent = Math.floor(
+        Math.random() * 100
+      );
+    </script>
   </body>
 </html>
